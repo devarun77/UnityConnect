@@ -1,0 +1,56 @@
+POST http://localhost:9000/register 
+Content-Type: application/json
+
+{
+    "username":"Arun",
+    "password":"1234",
+    "email":"arun@gmail.com",
+    "name":"arun"
+}
+
+###
+
+POST http://localhost:9000/login
+Content-Type: application/json
+
+{
+     "email":"armaan@gmail.com",
+     "password":"1234"
+}
+
+###
+GET  http://localhost:9000/get_user_and_profile
+Content-Type: application/json
+
+{
+  "token": "10fee767cd8ccfa5fe751bc45ada0573ea4217e1146b4ca83ec4235eb9006ef5"
+}
+
+###
+POST http://localhost:9000/update_profile_data
+Content-Type: application/json
+
+{
+    
+  "token": "e6479108fc431c006266e32bfc9802dbe31709c9406ac9804a9480168390a6e0",
+  "bio": "Live Your Life",
+    "currPost": "CTO",
+    "pastWork": [
+        {
+        "company": "Microsoft",
+        "position": "CTO",
+        "years" : "2+"
+        }
+    ],
+"education": [
+    {
+        "school":"DPS",
+        "degree":"BTech",
+        "fieldOfStudy": "Computer Science"
+    }
+]
+}
+
+###
+GET http://localhost:9000/get_all_users
+Content-Type: application/json
